@@ -31,12 +31,16 @@ export class TaskController {
   }
 
   @Get(':id')
-  async show(@Param('id') id: string): Promise<Task> {
+  async show(
+    @Param('id')
+    id: string): Promise<Task> {
     return await this.TaskService.findOne(id);
   }
 
   @Delete(':id')
-  async destroy(@Param('id') id: string): Promise<Task> {
+  async destroy(
+    @Param('id')
+    id: string): Promise<Task> {
     return await this.TaskService.delete(id);
   }
 }
