@@ -1,13 +1,9 @@
 import { IsString, IsNotEmpty, IsOptional } from "class-validator";
 
-export class CreateTaskDto {
+export class UpdateTaskListDto {
   @IsString()
-  @IsNotEmpty()
+  @IsOptional()
   name: string;
-
-  @IsString()
-  @IsNotEmpty()
-  taskList: string;
 
   @IsOptional()
   @IsString()
